@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.contact-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 3rem;
+}
+
+.contact-form-section {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(128, 0, 255, 0.4), 0 0 50px rgba(128, 0, 255, 0.2);
+  border: none;
+  position: relative;
+  z-index: 10;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.info-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.info-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.info-link {
+  color: #b366ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.info-link:hover {
+  color: #6000cc;
+  text-decoration: underline;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-input,
+.form-textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #8000ff;
+  box-shadow: 0 0 0 3px rgba(128, 0, 255, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-button {
+  background: linear-gradient(135deg, #8000ff 0%, #400080 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.send-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 255, 0.3);
+}
+
+.send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
+
+.separator {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8000ff, transparent);
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.footer-section {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-link {
+  color: #b366ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #6000cc;
+  text-decoration: underline;
+}
+
+.developer-credit {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-form-section {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .info-section {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .contact-title,
+  .info-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+  
+  .contact-title,
+  .footer-title {
+    font-size: 1.75rem;
+  }
+  
+  .send-button {
+    width: 100%;
+    text-align: center;
+  }
+}
