@@ -1,13 +1,9 @@
 import React from 'react';
 import './Success.css';
-import Moon from './Moon';
-import Stars from './Stars';
 
 const Success = ({ onGoBack }) => {
   return (
     <div className="success-container">
-      <Stars />
-      <Moon />
       <div className="success-content">
         <div className="success-icon">
           <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
